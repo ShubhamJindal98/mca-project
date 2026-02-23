@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommendation System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🎬 Movie Recommendation System</h1>
+
+    <!-- Genre Recommendation Form -->
+    <form method="POST">
+      <input type="text" name="genre" placeholder="Enter Genre (Action, Horror...)" />
+      <button type="submit" name="action" value="recommend">Recommend</button>
+    </form>
+
+    <!-- Movie Search Form -->
+    <form method="POST">
+      <input type="text" name="search" placeholder="Search Movie by Name" />
+      <button type="submit" name="action" value="search">Search</button>
+    </form>
+
+    <!-- Recommended Movies -->
+    {% if movies is defined and movies is not none and movies.shape[0] > 0 %}
+    <h2>Recommended Movies:</h2>
+    <ul>
+      {% for index, row in movies.iterrows() %}
+      <li>{{ row['title'] }} ⭐ ({{ row['rating'] }})</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <!-- Search Result -->
+    {% if searched is defined and searched is not none and searched.shape[0] > 0 %}
+    <h2>Search Result:</h2>
+    <ul>
+      {% for index, row in searched.iterrows() %}
+      <li>
+        {{ row['title'] }} - Genre: {{ row['genre'] }} ⭐ ({{ row['rating'] }})
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+  </div>
+
+</body>
+
+</html>

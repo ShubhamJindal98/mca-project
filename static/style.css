@@ -1,0 +1,35 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  margin-top: 80px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff4b2b;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff416c;
+}
+
+ul {
+  list-style: none;
+}
