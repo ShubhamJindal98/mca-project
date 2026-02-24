@@ -11,41 +11,50 @@
 <body>
 
   <div class="container">
+    <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" class="side-decor left-decor">
+    
+    <img src="https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg" class="side-decor right-decor">
     <h1>🎬 Movie Recommendation System</h1>
+<form method="GET" action="/" class="movie-form">
+  <select name="movie" class="movie-select">
+    {% for movie in movies %}
+    <option value="{{ movie }}" {% if current_movie==movie %}selected{% endif %}>
+      {{ movie }}
+    </option>
+    {% endfor %}
+  </select>
+  <button type="submit" class="movie-btn">Show Recommendation</button>
+</form>
 
-    <!-- Genre Recommendation Form -->
-    <form method="POST">
-      <input type="text" name="genre" placeholder="Enter Genre (Action, Horror...)" />
-      <button type="submit" name="action" value="recommend">Recommend</button>
-    </form>
+{% if selected is not none and selected.shape[0] > 0 %}
+<h2>Selected Movie</h2>
+{% for index, row in selected.iterrows() %}
+<div>
+  <img src="{{ row['poster'] }}" width="200">
+  <h3>{{ row['title'] }}</h3>
+  <p><b>Genre:</b> {{ row['genre'] }}</p>
+  <p><b>Rating:</b> ⭐ {{ row['rating'] }}</p>
+  <p><b>Actors:</b> {{ row['actors'] }}</p>
+  <p><b>Description:</b> {{ row['description'] }}</p>
+</div>
+{% endfor %}
+{% endif %}
 
-    <!-- Movie Search Form -->
-    <form method="POST">
-      <input type="text" name="search" placeholder="Search Movie by Name" />
-      <button type="submit" name="action" value="search">Search</button>
-    </form>
+{% if recommendations is not none %}
+<h2>Recommended Movies</h2>
 
-    <!-- Recommended Movies -->
-    {% if movies is defined and movies is not none and movies.shape[0] > 0 %}
-    <h2>Recommended Movies:</h2>
-    <ul>
-      {% for index, row in movies.iterrows() %}
-      <li>{{ row['title'] }} ⭐ ({{ row['rating'] }})</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
+<div class="movie-grid">
+  {% for index, row in recommendations.iterrows() %}
+  <div class="movie-card">
+    <a href="{{ url_for('home', movie=row['title']) }}">
+      <img src="{{ row['poster'] }}" width="150">
+    </a>
+    <h4>{{ row['title'] }}</h4>
+  </div>
+  {% endfor %}
+</div>
 
-    <!-- Search Result -->
-    {% if searched is defined and searched is not none and searched.shape[0] > 0 %}
-    <h2>Search Result:</h2>
-    <ul>
-      {% for index, row in searched.iterrows() %}
-      <li>
-        {{ row['title'] }} - Genre: {{ row['genre'] }} ⭐ ({{ row['rating'] }})
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
+{% endif %}
 
   </div>
 

@@ -1,84 +1,26 @@
-title,genre,rating
-Inception,Action,8.8
-The Dark Knight,Action,9.0
-Avengers: Endgame,Action,8.4
-Mad Max: Fury Road,Action,8.1
-John Wick,Action,7.9
-
-Interstellar,Sci-Fi,8.6
-The Matrix,Sci-Fi,8.7
-Arrival,Sci-Fi,7.9
-Gravity,Sci-Fi,7.7
-Blade Runner 2049,Sci-Fi,8.0
-
-Titanic,Romance,7.9
-The Notebook,Romance,7.8
-La La Land,Romance,8.0
-Pride & Prejudice,Romance,7.8
-Before Sunrise,Romance,8.1
-
-The Conjuring,Horror,7.5
-Insidious,Horror,6.8
-Hereditary,Horror,7.3
-The Nun,Horror,5.3
-A Quiet Place,Horror,7.5
-
-Toy Story,Animation,8.3
-Frozen,Animation,7.4
-Coco,Animation,8.4
-Up,Animation,8.2
-Inside Out,Animation,8.1
-
-The Shawshank Redemption,Drama,9.3
-Forrest Gump,Drama,8.8
-Gladiator,Drama,8.5
-Joker,Drama,8.4
-The Pursuit of Happyness,Drama,8.0
-
-The Hangover,Comedy,7.7
-Superbad,Comedy,7.6
-3 Idiots,Comedy,8.4
-The Mask,Comedy,6.9
-Home Alone,Comedy,7.7
-
-Se7en,Thriller,8.6
-Gone Girl,Thriller,8.1
-Shutter Island,Thriller,8.2
-The Silence of the Lambs,Thriller,8.6
-Parasite,Thriller,8.6
-
-The Godfather,Crime,9.2
-Goodfellas,Crime,8.7
-The Departed,Crime,8.5
-Scarface,Crime,8.3
-Pulp Fiction,Crime,8.9
-
-Harry Potter and the Sorcerer's Stone,Fantasy,7.6
-The Lord of the Rings,Fantasy,8.8
-The Hobbit,Fantasy,7.8
-Pan's Labyrinth,Fantasy,8.2
-Doctor Strange,Fantasy,7.5
-
-Sherlock Holmes,Mystery,7.6
-Knives Out,Mystery,7.9
-The Prestige,Mystery,8.5
-The Others,Mystery,7.6
-Memento,Mystery,8.4
-
-A Beautiful Mind,Biography,8.2
-Bohemian Rhapsody,Biography,8.0
-The Social Network,Biography,7.7
-The Imitation Game,Biography,8.0
-Lincoln,Biography,7.3
-
-The Lion King,Family,8.5
-Paddington,Family,7.3
-Finding Nemo,Family,8.1
-Encanto,Family,7.2
-The Incredibles,Family,8.0
-
-Rocky,Sports,8.1
-Moneyball,Sports,7.6
-Rush,Sports,8.1
-Chak De India,Sports,8.2
-Ford v Ferrari,Sports,8.1
+title,genre,rating,description,actors,poster,keywords
+Titanic,Romance,7.9,"A love story aboard the doomed RMS Titanic.","Leonardo DiCaprio, Kate Winslet","https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg","romance ship tragedy love ocean"
+The Notebook,Romance,7.8,"A young couple falls in love in the 1940s.","Ryan Gosling, Rachel McAdams","https://image.tmdb.org/t/p/w500/qom1SZSENdmHFNZBXbtJAU0WTlC.jpg","romance love relationship drama couple"
+La La Land,Romance,8.0,"A musician and actress fall in love in Los Angeles.","Ryan Gosling, Emma Stone","https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg","romance music dream relationship love"
+The Dark Knight,Action,9.0,"Batman faces the Joker in Gotham City.","Christian Bale, Heath Ledger","https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg","action superhero crime batman joker"
+Inception,Action,8.8,"A thief steals secrets through dream-sharing technology.","Leonardo DiCaprio, Joseph Gordon-Levitt","https://image.tmdb.org/t/p/w500/8h58OGhwwiXH7F9I1qFq5IYv2kG.jpg","dream thriller mind action sci-fi"
+Interstellar,Sci-Fi,8.6,"Explorers travel through a wormhole in space.","Matthew McConaughey, Anne Hathaway","https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg","space future survival sci-fi adventure"
+The Shawshank Redemption,Drama,9.3,"Two imprisoned men bond over years.","Tim Robbins, Morgan Freeman","https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg","prison friendship hope drama life"
+Gladiator,Action,8.5,"A Roman general seeks revenge.","Russell Crowe","https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg","war revenge hero action battle"
+Avengers,Action,8.0,"Superheroes unite to save Earth.","Robert Downey Jr., Chris Evans","https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg","superhero marvel team action villain"
+Joker,Drama,8.4,"The origin story of Joker.","Joaquin Phoenix","https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg","crime psychological drama villain dark"
+Forrest Gump,Drama,8.8,"Life journey of Forrest Gump.","Tom Hanks","https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg","life journey love inspiration drama"
+Parasite,Thriller,8.6,"A poor family schemes to become employed by a wealthy family.","Song Kang-ho","https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg","thriller class society crime suspense"
+The Godfather,Crime,9.2,"The aging patriarch of an organized crime dynasty transfers control to his son.","Al Pacino, Marlon Brando","https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg","mafia crime family power drama"
+3 Idiots,Comedy,8.4,"Three engineering students challenge the education system.","Aamir Khan","https://image.tmdb.org/t/p/w500/66A9MqXOyVFCssoloscw79z8Tew.jpg","comedy friendship college india life"
+Dangal,Sport,8.3,"A father trains his daughters to become world-class wrestlers.","Aamir Khan","https://image.tmdb.org/t/p/w500/AbcSRuCKaR2Oq0R2pHnThHjZfKJ.jpg","sport wrestling family india inspiration"
+Bahubali,Action,8.2,"A man learns about his royal heritage.","Prabhas","https://image.tmdb.org/t/p/w500/9BAjt8nSSms62uOVYn1t3C3dVto.jpg","epic war kingdom action india"
+KGF,Action,8.1,"The rise of a powerful gangster.","Yash","https://image.tmdb.org/t/p/w500/ltxvHpxlG1zKk4yFqZQ3Y4tX9kZ.jpg","gangster crime action power india"
+RRR,Action,8.0,"Two revolutionaries fight against British rule.","Ram Charan, Jr NTR","https://image.tmdb.org/t/p/w500/8ZbybiGYe8XM4WGmGlhF0ec5R7u.jpg","freedom action revolution india war"
+The Conjuring,Horror,7.5,"Paranormal investigators help a family terrorized by a dark presence.","Patrick Wilson","https://image.tmdb.org/t/p/w500/wVYREutTvI2tmxr6ujrHT704wGF.jpg","horror ghost haunted thriller"
+IT,Horror,7.3,"A group of bullied kids face a terrifying clown.","Bill Skarsgard","https://image.tmdb.org/t/p/w500/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg","horror clown thriller children fear"
+Her,Romance,8.0,"A man develops a relationship with an AI system.","Joaquin Phoenix","https://image.tmdb.org/t/p/w500/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg","romance ai future love relationship"
+Fight Club,Drama,8.8,"An insomniac office worker forms an underground fight club.","Brad Pitt, Edward Norton","https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg","psychological drama fight rebellion"
+Whiplash,Drama,8.5,"A young drummer enrolls in a cut-throat music conservatory.","Miles Teller","https://image.tmdb.org/t/p/w500/6uSPcdGNA2A6vJmCagXkvnutegs.jpg","music obsession drama ambition"
+Top Gun,Action,8.2,"A fighter pilot trains at an elite school.","Tom Cruise","https://image.tmdb.org/t/p/w500/8X8mM1Iu9fR2FqzJYkq8CkP2e7W.jpg","fighter pilot action military"
+Spider-Man,Action,8.0,"A teenager gains spider-like abilities.","Tom Holland","https://image.tmdb.org/t/p/w500/kY2c7wKgOfQjvbqe7yVzLTYkxjo.jpg","superhero action marvel teenager"

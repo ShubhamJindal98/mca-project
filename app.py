@@ -1,38 +1,40 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for, redirect
 import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
-# Create Flask app FIRST
 app = Flask(__name__)
 
-# Load dataset
 movies = pd.read_csv("movies.csv")
 
-@app.route("/", methods=["GET", "POST"])
+# Similarity
+vectorizer = CountVectorizer(stop_words='english')
+vectors = vectorizer.fit_transform(movies["keywords"])
+similarity = cosine_similarity(vectors)
+
+def get_similar_movies(title):
+    index = movies[movies["title"] == title].index[0]
+    distances = list(enumerate(similarity[index]))
+    distances = sorted(distances, reverse=True, key=lambda x: x[1])[1:6]
+    return movies.iloc[[i[0] for i in distances]]
+
+@app.route("/")
 def home():
-    recommended = None
-    searched_movie = None
+    movie_name = request.args.get("movie")
 
-    if request.method == "POST":
-        action = request.form.get("action")
+    selected_movie = None
+    recommendations = None
 
-        if action == "recommend":
-            genre = request.form.get("genre")
-            if genre:
-                recommended = movies[
-                    movies["genre"].str.lower() == genre.lower()
-                ].sort_values(by="rating", ascending=False)
-
-        elif action == "search":
-            search = request.form.get("search")
-            if search:
-                searched_movie = movies[
-                    movies["title"].str.lower() == search.lower()
-                ]
+    if movie_name:
+        selected_movie = movies[movies["title"] == movie_name]
+        if not selected_movie.empty:
+            recommendations = get_similar_movies(movie_name)
 
     return render_template("index.html",
-                           movies=recommended,
-                           searched=searched_movie)
-
+                           movies=movies["title"].values,
+                           selected=selected_movie,
+                           recommendations=recommendations,
+                           current_movie=movie_name)
 
 if __name__ == "__main__":
     app.run(debug=True)
